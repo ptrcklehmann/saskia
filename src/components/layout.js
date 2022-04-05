@@ -1,4 +1,5 @@
 import React from 'react'
+import { ParallaxProvider } from 'react-scroll-parallax';
 
 import './variables.css'
 import './global.css'
@@ -10,12 +11,12 @@ class Template extends React.Component {
     const { children } = this.props
 
     return (
-      <>
+      <ParallaxProvider>
         <Seo />
         <Navigation />
         <main>{children}</main>
         <Footer />
-      </>
+      </ParallaxProvider>
     )
   }
 }

@@ -1,20 +1,4 @@
-@font-face {
-  font-family: 'Inter var';
-  font-weight: 100 900;
-  font-display: swap;
-  font-style: normal;
-  font-named-instance: 'Regular';
-  src: url('/fonts/Inter-roman.var.woff2?v=3.19') format('woff2');
-}
-
-@font-face {
-  font-family: 'Inter var';
-  font-weight: 100 900;
-  font-display: swap;
-  font-style: italic;
-  font-named-instance: 'Italic';
-  src: url('/fonts/Inter-italic.var.woff2?v=3.19') format('woff2');
-}
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500&family=Gothic+A1:wght@400;500&display=swap');
 
 html {
   scroll-behavior: smooth;
@@ -27,7 +11,7 @@ html * {
 body {
   background: var(--background);
   color: var(--text-color);
-  font-family: var(--font-sans);
+  font-family: var(--font-serif);
   font-size: 16px;
   font-weight: var(--body);
   line-height: var(--default);
@@ -47,6 +31,7 @@ h3,
 h4,
 h5,
 h6 {
+  font-family: var(--font-sans);
   font-weight: var(--semibold);
   line-height: var(--dense);
 }

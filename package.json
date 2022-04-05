@@ -10,6 +10,7 @@
   "dependencies": {
     "gatsby": "^3.10.0",
     "gatsby-plugin-image": "^0.7.2",
+    "gatsby-plugin-preload-fonts": "^3.11.1",
     "gatsby-plugin-react-helmet": "^3.10.0",
     "gatsby-plugin-sharp": "^2.14.4",
     "gatsby-source-contentful": "^4.6.4",
@@ -19,7 +20,8 @@
     "lodash": "^4.17.21",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "react-helmet": "^6.1.0"
+    "react-helmet": "^6.1.0",
+    "react-scroll-parallax": "^3.0.5"
   },
   "devDependencies": {
     "contentful-import": "^8.2.28",
@@ -48,6 +50,7 @@
     "postinstall": "node ./bin/hello.js",
     "setup": "node ./bin/setup.js",
     "netlify:login": "netlify login",
-    "netlify:deploy": "netlify deploy -d public -p"
-  }
+    "netlify:deploy": "netlify deploy -d public -p",
+    "preload-fonts": "gatsby-preload-fonts"
+    }
 }

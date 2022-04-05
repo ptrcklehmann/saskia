@@ -36,16 +36,17 @@ if (!spaceId || !accessToken) {
 
 module.exports = {
   siteMetadata: {
-    title: "DR. Saskia Eschenbacher",
+    title: "Dr. Saskia Eschenbacher",
     description: "Systemische Therapie & Beratung in Augsburg, München, Berlin und Umgebung",
   },
-  pathPrefix: "/gatsby-contentful-starter",
+  pathPrefix: "/saskia",
   plugins: [
     "gatsby-transformer-remark",
     "gatsby-transformer-sharp",
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-sharp",
     "gatsby-plugin-image",
+    "gatsby-plugin-preload-fonts",
     {
       resolve: "gatsby-source-contentful",
       options: contentfulConfig,
