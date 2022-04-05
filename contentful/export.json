@@ -292,7 +292,80 @@
                     }
                 }
             ]
-        }
+        },
+        {
+            "name": "Expertise",
+            "description": "Expertise content",
+            "displayField": "expertiseTitle",
+            "fields": [
+              {
+                "id": "expertiseTitle",
+                "name": "Expertise title",
+                "type": "Symbol",
+                "localized": false,
+                "required": false,
+                "validations": [],
+                "disabled": false,
+                "omitted": false
+              },
+              {
+                "id": "expertiseText",
+                "name": "Expertise text",
+                "type": "Text",
+                "localized": false,
+                "required": false,
+                "validations": [],
+                "disabled": false,
+                "omitted": false
+              }
+            ],
+            "sys": {
+              "space": {
+                "sys": {
+                  "type": "Link",
+                  "linkType": "Space",
+                  "id": "pk4wgwq55c63"
+                }
+              },
+              "id": "expertise",
+              "type": "ContentType",
+              "createdAt": "2022-04-05T16:07:53.895Z",
+              "updatedAt": "2022-04-05T18:10:45.017Z",
+              "environment": {
+                "sys": {
+                  "id": "master",
+                  "type": "Link",
+                  "linkType": "Environment"
+                }
+              },
+              "publishedVersion": 9,
+              "publishedAt": "2022-04-05T18:10:45.017Z",
+              "firstPublishedAt": "2022-04-05T16:07:54.165Z",
+              "createdBy": {
+                "sys": {
+                  "type": "Link",
+                  "linkType": "User",
+                  "id": "2HUzgkWQ6G2iSSBuzq0BKm"
+                }
+              },
+              "updatedBy": {
+                "sys": {
+                  "type": "Link",
+                  "linkType": "User",
+                  "id": "2HUzgkWQ6G2iSSBuzq0BKm"
+                }
+              },
+              "publishedCounter": 5,
+              "version": 10,
+              "publishedBy": {
+                "sys": {
+                  "type": "Link",
+                  "linkType": "User",
+                  "id": "2HUzgkWQ6G2iSSBuzq0BKm"
+                }
+              }
+            }
+          }
     ],
     "editorInterfaces": [
         {
