@@ -5,11 +5,13 @@ import get from 'lodash/get'
 import Layout from '../components/layout'
 import Hero from '../components/hero'
 import ArticlePreview from '../components/article-preview'
+import Expertise from '../components/expertise'
 
 class RootIndex extends React.Component {
   render() {
     const posts=get(this,'props.data.allContentfulBlogPost.nodes')
     const [author]=get(this,'props.data.allContentfulPerson.nodes')
+    const expertise=get(this,'props.data.allContentfulExpertise.nodes')
 
     return (
       <Layout location={this.props.location}>
@@ -18,7 +20,7 @@ class RootIndex extends React.Component {
           title={author.name}
           content={author.shortBio.shortBio}
         />
-
+        <Expertise content={expertise} />
         <ArticlePreview posts={posts} />
       </Layout>
     )
@@ -29,7 +31,7 @@ export default RootIndex
 
 export const pageQuery=graphql`
   query HomeQuery {
-    allContentfulBlogPost (sort: { fields: [publishDate], order: DESC }) {
+    allContentfulBlogPost(sort: { fields: [publishDate], order: DESC }) {
       nodes {
         title
         slug
@@ -69,15 +71,14 @@ export const pageQuery=graphql`
       }
     }
     allContentfulExpertise {
-    edges {
-      node {
-        id
+      nodes {
         expertiseTitle
         expertiseText {
-          expertiseText
+        childMarkdownRemark {
+          html
         }
       }
-    }
+  }
   }
   }
 `

@@ -2,11 +2,12 @@ require("dotenv").config({
   path: `.env.${process.env.NODE_ENV}`,
 });
 
-const contentfulConfig = {
+const contentfulConfig={
   spaceId: process.env.CONTENTFUL_SPACE_ID,
   accessToken:
-    process.env.CONTENTFUL_ACCESS_TOKEN ||
+    process.env.CONTENTFUL_ACCESS_TOKEN||
     process.env.CONTENTFUL_DELIVERY_TOKEN,
+  environment: 'main'
 };
 
 // If you want to use the preview API please define
@@ -21,20 +22,20 @@ const contentfulConfig = {
 // https://www.contentful.com/developers/docs/references/content-preview-api/#/reference/spaces/space/get-a-space/console/js
 //
 // To change back to the normal CDA, remove the CONTENTFUL_HOST variable from your environment.
-if (process.env.CONTENTFUL_HOST) {
-  contentfulConfig.host = process.env.CONTENTFUL_HOST;
-  contentfulConfig.accessToken = process.env.CONTENTFUL_PREVIEW_ACCESS_TOKEN;
+if(process.env.CONTENTFUL_HOST) {
+  contentfulConfig.host=process.env.CONTENTFUL_HOST;
+  contentfulConfig.accessToken=process.env.CONTENTFUL_PREVIEW_ACCESS_TOKEN;
 }
 
-const { spaceId, accessToken } = contentfulConfig;
+const {spaceId,accessToken}=contentfulConfig;
 
-if (!spaceId || !accessToken) {
+if(!spaceId||!accessToken) {
   throw new Error(
     "Contentful spaceId and the access token need to be provided."
   );
 }
 
-module.exports = {
+module.exports={
   siteMetadata: {
     title: "Dr. Saskia Eschenbacher",
     description: "Systemische Therapie & Beratung in Augsburg, München, Berlin und Umgebung",
