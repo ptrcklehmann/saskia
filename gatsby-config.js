@@ -41,10 +41,23 @@ module.exports={
   },
   pathPrefix: "/saskia",
   plugins: [
+    {
+      resolve: "gatsby-plugin-manifest",
+      options: {
+        name: "Dr. Saskia Eschenbacher",
+        start_url: "/",
+        icon: "src/images/icon.png",
+      },
+    },
     "gatsby-transformer-remark",
     "gatsby-transformer-sharp",
     "gatsby-plugin-react-helmet",
-    "gatsby-plugin-sharp",
+    {
+      resolve: "gatsby-plugin-sharp",
+      options: {
+        failOnError: false
+      }
+    },
     "gatsby-plugin-image",
     "gatsby-plugin-preload-fonts",
     {

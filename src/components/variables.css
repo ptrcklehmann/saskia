@@ -10,6 +10,7 @@
 
   /* palette */
   --white: #fff;
+  --cloud-dancer: #F0EEE9;
   --black: #000;
   --black-fade-5: rgba(0, 0, 0, 0.05);
 
@@ -52,8 +53,8 @@
 
   /* tokens */
   /* colors */
-  --primary: #4a90e2;
-  --background: var(--white);
+  --primary: #6567ab;
+  --background: var(--cloud-dancer);
   --border: var(--black-fade-5);
 
   /* text */

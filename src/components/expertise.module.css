@@ -8,13 +8,23 @@
   grid-auto-rows: auto;
   gap: 1em 0px;
 }
+.expertise-list .expertise-item {
+  margin: 5rem 0;
+}
 
 .title {
   display: inline-block;
-  font-size: var(--text-lg);
+  font-size: var(--text-3xl);
   margin-bottom: var(--space-xs);
   margin-top: var(--space-lg);
   border-bottom: 1.5px solid transparent;
+}
+.title::after {
+  content: "";
+  display: block;
+  width: 52px;
+  padding-top: 3px;
+  border-bottom: 2px solid #000;
 }
 
 .link {
@@ -28,4 +38,15 @@
 .meta {
   display: flex;
   justify-content: space-between;
+}
+h2 {
+  font-size: var(--text-lg);
+}
+
+h3 {
+  font-size: var(--text-md);
+  color: var(--primary)
+}
+ul {
+  list-style-type: "_ ";
 }

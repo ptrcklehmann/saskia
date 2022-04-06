@@ -7,7 +7,7 @@ import * as styles from './hero.module.css'
 const Hero = ({ image, title, content }) => {
   return (
   <div className={styles.hero}>
-    <Parallax translateX={[0, 100]}  speed={-20}>
+    <Parallax translateX={[0, 50]}  speed={-20}>
     {image && (
       <GatsbyImage className={styles.image} alt={title} image={image} />
     )}
