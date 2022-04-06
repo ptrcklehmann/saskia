@@ -70,7 +70,7 @@ export const pageQuery=graphql`
         }
       }
     }
-    allContentfulExpertise {
+    allContentfulExpertise (filter: {node_locale: {eq: "en-GB"}}) {
       nodes {
         expertiseTitle
         expertiseText {
