@@ -1,5 +1,5 @@
 import React from 'react'
-import { graphql } from 'gatsby'
+import {graphql} from 'gatsby'
 import get from 'lodash/get'
 
 import Layout from '../components/layout'
@@ -8,8 +8,8 @@ import ArticlePreview from '../components/article-preview'
 
 class RootIndex extends React.Component {
   render() {
-    const posts = get(this, 'props.data.allContentfulBlogPost.nodes')
-    const [author] = get(this, 'props.data.allContentfulPerson.nodes')
+    const posts=get(this,'props.data.allContentfulBlogPost.nodes')
+    const [author]=get(this,'props.data.allContentfulPerson.nodes')
 
     return (
       <Layout location={this.props.location}>
@@ -27,9 +27,9 @@ class RootIndex extends React.Component {
 
 export default RootIndex
 
-export const pageQuery = graphql`
+export const pageQuery=graphql`
   query HomeQuery {
-    allContentfulBlogPost(sort: { fields: [publishDate], order: DESC }) {
+    allContentfulBlogPost (sort: { fields: [publishDate], order: DESC }) {
       nodes {
         title
         slug
@@ -50,7 +50,7 @@ export const pageQuery = graphql`
         }
       }
     }
-    allContentfulPerson(
+    allContentfulPerson (
       filter: { contentful_id: { eq: "15jwOBqpxqSAOy2eOO4S0m" } }
     ) {
       nodes {
@@ -68,5 +68,16 @@ export const pageQuery = graphql`
         }
       }
     }
+    allContentfulExpertise {
+    edges {
+      node {
+        id
+        expertiseTitle
+        expertiseText {
+          expertiseText
+        }
+      }
+    }
+  }
   }
 `
