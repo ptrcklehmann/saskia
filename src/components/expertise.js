@@ -16,7 +16,7 @@ const Expertise=({content}) => {
                             <h1 className={styles.title}>{text.expertiseTitle}</h1>
                             <div
                             dangerouslySetInnerHTML={{__html:text.expertiseText?.childMarkdownRemark?.html}}
-                            />
+                            className={styles.body} />
                         </li>
                     )
                 })}
