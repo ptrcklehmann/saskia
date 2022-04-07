@@ -1,11 +1,15 @@
 .hero {
-  align-items: flex-end;
-  display: flex;
-  margin: 0 auto;
+  display: grid;
+  grid-auto-flow: row dense;
+  grid-auto-rows: 1fr;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 0em 1em;
   max-width: var(--size-max-width);
-  min-height: 200px;
-  padding: 0 0 var(--size-gutter);
+  margin: 0 auto;
+  padding: var(--space-2xl) var(--size-gutter);
   position: relative;
+  height: 100vh;
 }
 
 .image {
@@ -13,18 +17,18 @@
     Ensure golden ratio for the hero size while limiting it to some extend to
     the viewport width
   */
-  height: 61.8vh;
-  max-height: 660px;
-  width: 100%;
+  width:25vw;
+  margin-left: auto;
+
+
 }
 
 .details {
   background: var(--background);
   left: 0;
-  max-width: 40rem;
-  width: 85%;
+  width: 100%;
   padding: var(--space-2xl) var(--size-gutter) 0;
-  position: absolute;
+  position: sticky;
 }
 
 .title {
@@ -34,6 +38,7 @@
   line-height: var(--solid);
   margin: 0 0 var(--space-xl);
   color: var(--primary);
+  position:sticky;
 }
 
 .content {
@@ -62,7 +67,7 @@
 @media (min-width: 1024px) {
   .image {
     margin-left: auto;
-    width: 85%;
+
   }
 
   .details {

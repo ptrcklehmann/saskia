@@ -1,12 +1,12 @@
 :root {
   /* primitives */
   /* font-family */
-  --font-sans: 'Gothic A1', sans-serif, BlinkMacSystemFont, 'Segoe UI',
+  --font-sans: 'Lato', sans-serif, BlinkMacSystemFont, 'Segoe UI',
     Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
     'Segoe UI Symbol';
   --font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono',
     'Courier New', monospace;
-  --font-serif: 'EB Garamond', serif;
+  --font-serif: 'Noto Serif', serif;
 
   /* palette */
   --white: #fff;

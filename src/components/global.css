@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500&family=Gothic+A1:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 html {
   scroll-behavior: smooth;
@@ -83,4 +83,11 @@ tt:after {
 pre,
 code {
   font-family: var(--font-monospace);
+}
+main {
+  max-width: var(--size-max-width);
+  align-items: center;
+  margin: 0 auto;
+  padding: var(--space-2xl) var(--size-gutter);
+  position: relative;
 }
