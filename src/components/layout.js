@@ -13,8 +13,10 @@ class Template extends React.Component {
     return (
       <ParallaxProvider>
         <Seo />
-        <Navigation />
-        <main>{children}</main>
+        <main>
+          <Navigation />
+          {children}
+        </main>
         <Footer />
       </ParallaxProvider>
     )
