@@ -19,6 +19,8 @@ body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   scroll-behavior: smooth;
+  position: relative;
+  overflow-x: hidden;
 }
 
 img {
@@ -88,7 +90,13 @@ code {
 main {
   max-width: var(--size-max-width);
   align-items: center;
-  margin: 0 auto;
+  margin: 24px auto auto auto;
   padding: var(--space-2xl) var(--size-gutter);
+  position: relative;
+  width: 100%;
+  z-index: 0;
+
+}
+footer {
   position: relative;
 }

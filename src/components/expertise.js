@@ -12,7 +12,7 @@ const Expertise=({content}) => {
             <ul className={styles.expertiseList}>
                 {content.map((text) => {
                     return (
-                        <li key={text.expertiseTitle} className={styles.expertiseItem}>
+                        <li key={text.expertiseText?.childMarkdownRemark?.id} className={styles.expertiseItem}>
                             <h1 className={styles.title}>{text.expertiseTitle}</h1>
                             <div
                             dangerouslySetInnerHTML={{__html:text.expertiseText?.childMarkdownRemark?.html}}
