@@ -8,9 +8,6 @@
     "url": "https://github.com/contentful/starter-gatsby-blog/issues"
   },
   "dependencies": {
-    "@emotion/react": "^11.9.0",
-    "@emotion/styled": "^11.8.1",
-    "@mui/material": "^5.6.0",
     "gatsby": "^4.11.2",
     "gatsby-plugin-image": "^0.7.2",
     "gatsby-plugin-manifest": "^2.6.1",

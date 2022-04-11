@@ -36,7 +36,7 @@ if(!spaceId||!accessToken) {
 
 module.exports={
   siteMetadata: {
-    title: "m",
+    title: "Dr. Saskia Eschenbacher",
     description: "Systemische Therapie & Beratung in Augsburg, München, Berlin und Umgebung",
   },
   pathPrefix: "/saskia",
