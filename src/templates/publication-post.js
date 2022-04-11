@@ -8,7 +8,7 @@ import Hero from '../components/hero'
 import Tags from '../components/tags'
 import * as styles from './blog-post.module.css'
 
-class BlogPostTemplate extends React.Component {
+class PublicationPostTemplate extends React.Component {
   render() {
     const post = get(this.props, 'data.contentfulBlogPost')
     const previous = get(this.props, 'data.previous')
@@ -67,7 +67,7 @@ class BlogPostTemplate extends React.Component {
   }
 }
 
-export default BlogPostTemplate
+export default PublicationPostTemplate
 
 export const pageQuery = graphql`
   query BlogPostBySlug(

@@ -1,4 +1,4 @@
-.expertise-list {
+.about-me {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -12,9 +12,7 @@
   min-height: 100vh;
   height: fit-content;
 }
-.expertise-item h2 {
-  font-size: var(--text-2xl);
-}
+
 
 .title {
   display: inline-block;
@@ -46,6 +44,9 @@
   display: flex;
   justify-content: space-between;
 }
+h2 {
+  font-size: var(--text-lg);
+}
 
 h3 {
   font-size: var(--text-md);
@@ -53,22 +54,4 @@ h3 {
 }
 ul {
   list-style-type: "_ ";
-}
-.sub-expertise-item {
-  height: fit-content;
-}
-.subtitle {
-  display: inline-block;
-  font-size: var(--text-xl);
-  margin-bottom: var(--space-xs);
-  margin-top: var(--space-lg);
-  border-bottom: 1px solid transparent;
-  color: var(--primary);
-}
-.subtitle::after {
-  content: "";
-  display: block;
-  width: 52px;
-  padding-top: 3px;
-  border-bottom: 1px solid var(--primary);
 }

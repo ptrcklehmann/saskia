@@ -6,12 +6,14 @@ import Layout from '../components/layout'
 import Hero from '../components/hero'
 import ArticlePreview from '../components/article-preview'
 import Expertise from '../components/expertise'
+import AboutMe from '../components/about-me'
 
 class RootIndex extends React.Component {
   render() {
-    const posts=get(this,'props.data.allContentfulBlogPost.nodes')
+    const publications=get(this,'props.data.allContentfulBlogPost.nodes')
     const [author]=get(this,'props.data.allContentfulPerson.nodes')
     const expertise=get(this,'props.data.allContentfulExpertise.nodes')
+    const about=get(this,'props.data.allContentfulAbout.nodes')
 
     return (
       <Layout location={this.props.location}>
@@ -20,8 +22,9 @@ class RootIndex extends React.Component {
           title={author.name}
           content={author.shortBio.shortBio}
         />
+        <AboutMe content={about} />
         <Expertise content={expertise} />
-        <ArticlePreview posts={posts} />
+        <ArticlePreview publications={publications} />
       </Layout>
     )
   }
@@ -70,15 +73,34 @@ export const pageQuery=graphql`
         }
       }
     }
-    allContentfulExpertise (filter: {node_locale: {eq: "en-GB"}}) {
-      nodes {
-        expertiseTitle
-        expertiseText {
+    allContentfulAbout {
+    nodes {
+      aboutMeTitle
+      aboutMeText {
         childMarkdownRemark {
           html
         }
       }
+      node_locale
+    }
   }
-  }
+  allContentfulExpertise(sort: {fields: orderNumber}) {
+    nodes {
+      expertiseTitle
+      expertiseText {
+        childMarkdownRemark {
+          html
+        }
+      }
+      subExpertise {
+        subExpertiseTitle
+        subExpertiseText {
+          childMarkdownRemark {
+            html
+          }
+        }
+      }
+    }
+    }
   }
 `
