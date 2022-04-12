@@ -23,6 +23,10 @@
   margin-top: var(--space-lg);
   border-bottom: 1.5px solid transparent;
 }
+.curved-line {
+  position: absolute;
+  z-index: -1;
+}
 .title::after {
   content: "";
   display: block;

@@ -3,11 +3,11 @@ import {GatsbyImage} from 'gatsby-plugin-image'
 import {Parallax} from 'react-scroll-parallax';
 import Sticky from 'react-stickynode';
 import Logo from './logo'
+import CurvedLine from './curved-line'
 import * as styles from './hero.module.css'
 
 const Hero=({image,title,content}) => {
   return (
-
     <div className={styles.hero}>
       <Sticky innerZ={4} className={styles.details} activeClass={styles.active} innerClass={styles.stickyInnerWrapper}>
           {/* <span className={styles.logo} /> */}
@@ -20,6 +20,7 @@ const Hero=({image,title,content}) => {
           <GatsbyImage className={styles.image} alt={title} image={image} />
         )}
       </Parallax>
+
     </div>
 
   )

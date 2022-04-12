@@ -60,6 +60,16 @@
   animation: animate-logo-stroke 4s ease-in-out 1s both;
   transition: all 0.5s ease-in-out;
 }
+.curved {
+  width: 90%;
+  height: auto;
+  position: absolute;
+  z-index: -1;
+  left: -10%;
+  bottom: -10%;
+  animation: checkmark-animation 1s ease-out forwards;
+  transition: all 0.9s ease-in-out;
+}
 .active {
   width: 100%;
 }
@@ -125,4 +135,31 @@
     stroke-dashoffset: 0;
     stroke-dasharray: 3106.755126953125px;
   }
+}
+@keyframes animate-line-stroke {
+  0% {
+    stroke-dashoffset: 3106.755126953125px;
+    stroke-dasharray: 3106.755126953125px;
+  }
+
+  100% {
+    stroke-dashoffset: 0;
+    stroke-dasharray: 3106.755126953125px;
+  }
+}
+
+@keyframes checkmark-animation {
+	40% {
+		transform: scale(1);
+	}
+	55% {
+		transform: scale(1.2);
+	}
+	70% {
+		transform: scale(1);
+	}
+	100% {
+		stroke-dashoffset: 0;
+		transform: scale(1);
+	}
 }

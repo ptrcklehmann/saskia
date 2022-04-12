@@ -3,7 +3,6 @@ import React from 'react'
 import Container from './container'
 import * as styles from './expertise.module.css'
 
-
 const Expertise=({content}) => {
     if(!content) return null
     if(!Array.isArray(content)) return null

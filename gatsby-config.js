@@ -60,7 +60,7 @@ module.exports={
     },
     "gatsby-plugin-image",
     "gatsby-plugin-preload-fonts",
-    "gatsby-plugin-material-ui",
+    'gatsby-plugin-postcss',
     {
       resolve: "gatsby-source-contentful",
       options: contentfulConfig,

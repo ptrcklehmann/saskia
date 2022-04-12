@@ -30,9 +30,13 @@
     "react-stickynode": "^4.0.0"
   },
   "devDependencies": {
+    "autoprefixer": "^10.4.4",
     "contentful-import": "^8.2.28",
+    "gatsby-plugin-postcss": "^5.11.0",
     "netlify-cli": "^8.14.1",
-    "npm-check": "^4.1.4"
+    "npm-check": "^4.1.4",
+    "postcss": "^8.4.12",
+    "tailwindcss": "^3.0.23"
   },
   "engines": {
     "node": ">=14.0.0"
