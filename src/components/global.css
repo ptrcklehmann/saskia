@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&display=swap');
 
 html {
   scroll-behavior: smooth;
@@ -18,7 +18,6 @@ body {
   margin: 0;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
-  scroll-behavior: smooth;
   position: relative;
   overflow-x: hidden;
 }
@@ -34,7 +33,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: var(--font-sans);
+  font-family: var(--font-serif);
   font-weight: var(--semibold);
   line-height: var(--dense);
 }
@@ -87,16 +86,52 @@ pre,
 code {
   font-family: var(--font-monospace);
 }
-main {
-  /* max-width: var(--size-max-width);
-  align-items: center;
-  margin: 24px auto auto auto;
-  padding: var(--space-2xl) var(--size-gutter);
-  position: relative;
-  width: 100%;
-  z-index: 0; */
 
+/* Pulsing animation */
+@keyframes pulseLoop {
+    0% { opacity: .15; transform: scale(1) translateZ(0); }
+    30% { opacity: .15; }
+    60% { opacity: 0; }
+    80% { opacity: 0; transform: scale(1.8) translateZ(0); }
 }
-footer {
-  position: relative;
+@keyframes pulseMiniLoop {
+    0% { opacity: 0; transform: scale(1) translateZ(0); }
+    30% { opacity: .3; }
+    50% { opacity: .3; }
+    80% { opacity: 0; transform: scale(3) translateZ(0); }
+}
+.pulse {
+    transform: scale(1);
+    opacity: 0;
+    transform-origin: center;
+    animation: pulseLoop 10000ms linear infinite;
+}
+.pulse-mini {
+    animation: pulseMiniLoop 6000ms linear infinite;
+}
+.pulse-1 {
+    animation-delay: -3000ms;
+}
+.pulse-2 {
+    animation-delay: -6000ms;
+}
+
+/* Animations delay */
+.animation-delay-500 {
+    animation-delay: 500ms !important;
+}
+
+.animation-delay-1000 {
+    animation-delay: 1000ms !important;
+}
+
+.translate-z-0 {
+    transform: translateZ(0);
+}
+
+/* Custom AOS animations */
+[data-aos="zoom-y-out"] {
+  transform: scaleX(1.03);
+  opacity: 0;
+  transition-property: transform, opacity;
 }

@@ -1,12 +1,15 @@
 import React from 'react'
 import {graphql} from 'gatsby'
 import get from 'lodash/get'
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 import Layout from '../components/layout'
 import Hero from '../components/hero'
 import ArticlePreview from '../components/article-preview'
 import Expertise from '../components/expertise'
 import AboutMe from '../components/about-me'
+AOS.init()
 
 class RootIndex extends React.Component {
   render() {
@@ -23,6 +26,7 @@ class RootIndex extends React.Component {
           content={author.shortBio.shortBio}
         />
         <AboutMe content={about} />
+
         <Expertise content={expertise} />
         <ArticlePreview publications={publications} />
       </Layout>

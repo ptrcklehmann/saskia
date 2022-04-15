@@ -23,14 +23,7 @@
   margin-left: auto;
   float: center;
 }
-.sticky-inner-wrapper {
-  display: flex;
-  align-items: start;
-  flex-wrap: nowrap;
-  flex-direction: column;
-  transition: all 0.4s ease-in-out;
 
-}
 .details {
   float: left;
   padding: var(--space-2xl) 0;
@@ -41,9 +34,9 @@
   font-size: var(--text-title);
   font-weight: var(--extrabold);
   line-height: var(--solid);
-  margin: 0 0 var(--space-xl);
+  margin: var(--space-xl) 0;
   color: var(--primary);
-  display: inline;
+  /* display: inline; */
   transition: all 0.3 ease-in-out;
   transition: font-size 0.5s ease-in-out;
 }
@@ -54,46 +47,11 @@
   transition: all 0.3s ease-in-out;
 }
 .logo {
-  width: 10rem;
-  height: 15rem;
-  margin: 1rem 0;
+  width: 15rem;
+  height: 20rem;
+  margin: 2rem 0;
   animation: animate-logo-stroke 4s ease-in-out 1s both;
-  transition: all 0.5s ease-in-out;
-}
-.curved {
-  width: 90%;
-  height: auto;
-  position: absolute;
-  z-index: -1;
-  left: -10%;
-  bottom: -10%;
-  animation: checkmark-animation 1s ease-out forwards;
-  transition: all 0.9s ease-in-out;
-}
-.active {
-  width: 100%;
-}
-.active .sticky-inner-wrapper {
-  flex-direction: row;
-  align-items: center;
-  width: 100%;
-  width: 100vw;
-
-}
-.active .title {
-  font-size: var(--text-2xl);
-  margin: 1rem 0;
-  padding-left: .5rem;
-}
-
-.active .logo {
-  display: inline-block;
-  width: var(--text-2xl);
-  height: var(--text-2xl);
-
-}
-.active .content {
-  display: none;
+  transition: all 1.5s ease-in-out;
 }
 
 @media (min-width: 480px) {

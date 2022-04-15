@@ -9,11 +9,13 @@
   gap: 1em 0px;
 }
 .expertise-item {
-  min-height: 100vh;
   height: fit-content;
 }
 .expertise-item h2 {
   font-size: var(--text-2xl);
+}
+.expertise-item a {
+  color: var(--primary);
 }
 
 .title {
@@ -28,7 +30,7 @@
   z-index: -1;
 }
 .title::after {
-  content: "";
+  content: '';
   display: block;
   width: 52px;
   padding-top: 3px;
@@ -37,6 +39,9 @@
 .body {
   height: 100%;
   position: relative;
+}
+.body h2 {
+  padding: 1rem 0 .5rem 0;
 }
 .link {
   text-decoration: none;
@@ -51,12 +56,8 @@
   justify-content: space-between;
 }
 
-h3 {
-  font-size: var(--text-md);
-  color: var(--primary)
-}
 ul {
-  list-style-type: "_ ";
+  list-style-type: '_ ';
 }
 .sub-expertise-item {
   height: fit-content;
@@ -70,7 +71,7 @@ ul {
   color: var(--primary);
 }
 .subtitle::after {
-  content: "";
+  content: '';
   display: block;
   width: 52px;
   padding-top: 3px;

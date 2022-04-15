@@ -8,6 +8,7 @@
     "url": "https://github.com/contentful/starter-gatsby-blog/issues"
   },
   "dependencies": {
+    "aos": "^2.3.4",
     "gatsby": "^4.11.2",
     "gatsby-plugin-image": "^0.7.2",
     "gatsby-plugin-manifest": "^2.6.1",
@@ -27,7 +28,8 @@
     "react-helmet": "^6.1.0",
     "react-scroll": "^1.8.6",
     "react-scroll-parallax": "^3.0.5",
-    "react-stickynode": "^4.0.0"
+    "react-stickynode": "^4.0.0",
+    "react-transition-group": "^4.4.2"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.4",

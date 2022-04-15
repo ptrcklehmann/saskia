@@ -13,11 +13,13 @@ class Template extends React.Component {
     return (
       <ParallaxProvider>
         <Seo />
-        <main>
-          <Navigation />
+        <div className="flex flex-col min-h-screen overflow-hidden">
+        <Navigation />
+        <main className="flex-grow">
           {children}
         </main>
         <Footer />
+        </div>
       </ParallaxProvider>
     )
   }
