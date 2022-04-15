@@ -88,13 +88,13 @@ code {
   font-family: var(--font-monospace);
 }
 main {
-  max-width: var(--size-max-width);
+  /* max-width: var(--size-max-width);
   align-items: center;
   margin: 24px auto auto auto;
   padding: var(--space-2xl) var(--size-gutter);
   position: relative;
   width: 100%;
-  z-index: 0;
+  z-index: 0; */
 
 }
 footer {
