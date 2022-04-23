@@ -50,6 +50,7 @@
   flex-direction: row;
   flex-shrink: 0;
   gap: var(--space-md);
+  color: var(--primary);
 }
 
 @media (max-width: 767px) {

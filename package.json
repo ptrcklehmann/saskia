@@ -3,9 +3,9 @@
   "description": "Dr. Saskia Eschenbacher",
   "private": true,
   "version": "0.0.1",
-  "author": "Patrick Lehmann <opensource@contentful.com>",
+  "author": "Patrick Lehmann <ptrcklehmann@gmail.com>",
   "bugs": {
-    "url": "https://github.com/contentful/starter-gatsby-blog/issues"
+    "url": "https://github.com/ptrcklehmann/saskia"
   },
   "dependencies": {
     "aos": "^2.3.4",
