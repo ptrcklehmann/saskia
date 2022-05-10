@@ -11,7 +11,6 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       {
         allContentfulBlogPost {
           nodes {
-            title
             slug
           }
         }

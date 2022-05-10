@@ -1,6 +1,4 @@
 import React from 'react'
-
-import Container from './container'
 import * as styles from './about-me.module.css'
 
 const AboutMe=({content}) => {

@@ -77,38 +77,21 @@ export const pageQuery = graphql`
   ) {
     contentfulBlogPost(slug: { eq: $slug }) {
       slug
-      title
       author {
         name
-      }
-      publishDate(formatString: "MMMM Do, YYYY")
-      rawDate: publishDate
-      heroImage {
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, width: 1280)
-        resize(height: 630, width: 1200) {
-          src
-        }
       }
       body {
         childMarkdownRemark {
           html
-          timeToRead
         }
       }
       tags
-      description {
-        childMarkdownRemark {
-          excerpt
-        }
-      }
     }
     previous: contentfulBlogPost(slug: { eq: $previousPostSlug }) {
       slug
-      title
     }
     next: contentfulBlogPost(slug: { eq: $nextPostSlug }) {
       slug
-      title
     }
   }
 `
