@@ -3,13 +3,15 @@ import {graphql} from 'gatsby'
 import get from 'lodash/get'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-
 import Layout from '../components/layout'
 import Hero from '../components/hero'
 import ArticlePreview from '../components/article-preview'
 import Expertise from '../components/expertise'
 import AboutMe from '../components/about-me'
 
+if (typeof window !== `undefined`) {
+  AOS.init()
+}
 class RootIndex extends React.Component {
   render() {
     const publications=get(this,'props.data.allContentfulBlogPost.nodes')
