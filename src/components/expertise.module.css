@@ -6,7 +6,7 @@
   grid-template-columns: 1fr;
   grid-template-rows: auto;
   grid-auto-rows: auto;
-  gap: 1em 0px;
+  gap: .5em 0px;
 }
 .expertise-item {
   height: fit-content;

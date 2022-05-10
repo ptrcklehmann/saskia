@@ -16,7 +16,7 @@ const ArticlePreview=({publications}) => {
           <ul className={styles.articleList}>
             {publications.map((post) => {
               return (
-                <li key={post.slug}>
+                <li key={post.slug} className={styles.article}>
                   <Link to={`/publication/${post.slug}`} className={styles.link}>
                   </Link>
                   <div
