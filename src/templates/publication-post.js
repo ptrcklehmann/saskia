@@ -1,19 +1,15 @@
 import React from 'react'
-import { Link, graphql } from 'gatsby'
+import { graphql } from 'gatsby'
 import get from 'lodash/get'
 
 import Seo from '../components/seo'
 import Layout from '../components/layout'
-import Hero from '../components/hero'
 import Tags from '../components/tags'
 import * as styles from './blog-post.module.css'
 
 class PublicationPostTemplate extends React.Component {
   render() {
     const post = get(this.props, 'data.contentfulBlogPost')
-    const previous = get(this.props, 'data.previous')
-    const next = get(this.props, 'data.next')
-
     return (
       <Layout location={this.props.location}>
         <Seo
@@ -62,12 +58,8 @@ class PublicationPostTemplate extends React.Component {
 export default PublicationPostTemplate
 
 export const pageQuery = graphql`
-  query BlogPostBySlug(
-    $slug: String!
-    $previousPostSlug: String
-    $nextPostSlug: String
-  ) {
-    contentfulBlogPost(slug: { eq: $slug }) {
+  query BlogPostBySlug {
+    contentfulBlogPost {
       slug
       author {
         name
@@ -78,12 +70,6 @@ export const pageQuery = graphql`
         }
       }
       tags
-    }
-    previous: contentfulBlogPost(slug: { eq: $previousPostSlug }) {
-      slug
-    }
-    next: contentfulBlogPost(slug: { eq: $nextPostSlug }) {
-      slug
     }
   }
 `
