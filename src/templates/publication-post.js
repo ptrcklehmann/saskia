@@ -17,20 +17,12 @@ class PublicationPostTemplate extends React.Component {
     return (
       <Layout location={this.props.location}>
         <Seo
-          title={post.title}
-          description={post.description.childMarkdownRemark.excerpt}
-          image={`http:${post.heroImage.resize.src}`}
-        />
-        <Hero
-          image={post.heroImage?.gatsbyImageData}
-          title={post.title}
-          content={post.description?.childMarkdownRemark?.excerpt}
+          title={'Publication'}
+          description={post.body.childMarkdownRemark.excerpt}
         />
         <div className={styles.container}>
           <span className={styles.meta}>
             {post.author?.name} &middot;{' '}
-            <time dateTime={post.rawDate}>{post.publishDate}</time> –{' '}
-            {post.body?.childMarkdownRemark?.timeToRead} minute read
           </span>
           <div className={styles.article}>
             <div
@@ -40,7 +32,7 @@ class PublicationPostTemplate extends React.Component {
               }}
             />
             <Tags tags={post.tags} />
-            {(previous || next) && (
+            {/* {(previous || next) && (
               <nav>
                 <ul className={styles.articleNavigation}>
                   {previous && (
@@ -59,7 +51,7 @@ class PublicationPostTemplate extends React.Component {
                   )}
                 </ul>
               </nav>
-            )}
+            )} */}
           </div>
         </div>
       </Layout>

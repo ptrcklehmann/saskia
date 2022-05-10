@@ -1,5 +1,7 @@
 const path = require('path')
-
+if (typeof window !== `undefined`) {
+  AOS.init()
+}
 exports.createPages = async ({ graphql, actions, reporter }) => {
   const { createPage } = actions
 

@@ -9,7 +9,6 @@ import Hero from '../components/hero'
 import ArticlePreview from '../components/article-preview'
 import Expertise from '../components/expertise'
 import AboutMe from '../components/about-me'
-AOS.init()
 
 class RootIndex extends React.Component {
   render() {
